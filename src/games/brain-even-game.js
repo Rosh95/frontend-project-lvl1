@@ -1,13 +1,17 @@
-import readlineSync from 'readline-sync';
+import getRandomNumber from '../randomNumber.js';
+import startGame from '../even.js';
 
-const Hello = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log('Welcome to the Brain Games!');
-  return `Hello, ${name}`;
-};
+const gameDescription =
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
-const parity = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const isEven = (num) => num % 2 === 0;
+
+const getGameData = () => {
+  const question = getRandomNumber();
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
-// eslint-disable-next-line import/prefer-default-export
-export { Hello };
+const playStartGame = () => {
+  startGame(gameDescription, getGameData);
+};
+export default playStartGame;
