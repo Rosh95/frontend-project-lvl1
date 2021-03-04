@@ -15,9 +15,7 @@ const startGame = (gameDescription, getGameData) => {
     if (answer === correctAnswer) {
       console.log('Correct');
     } else {
-      console.log(
-        `'${answer} is wrong answer ;(. Correct answer was '${correctAnswer}' ./n Let's try again, ${name}!`
-      );
+      console.log(`'${answer} is wrong answer ;(. Correct answer was '${correctAnswer}' ./n Let's try again, ${name}!`);
       return;
     }
   }
