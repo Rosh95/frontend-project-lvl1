@@ -10,7 +10,7 @@ const getGameData = () => {
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
-const playStartGame = () => {
+const playGame = () => {
   startGame(gameDescription, getGameData);
 };
-export default playStartGame;
+export default playGame;

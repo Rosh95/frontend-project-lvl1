@@ -17,16 +17,15 @@ const getExpressionResult = (operation, num1, num2) => {
 };
 
 const getCorrectResult = () => {
-  const operation = ['+', '-', '*'];
+  const operations = ['+', '-', '*'];
   const num1 = getRandomNumber(1, 30);
   const num2 = getRandomNumber(1, 30);
-  const randomOperation = operation[getRandomNumber(0, operation.length)];
+  const randomOperation = operations[getRandomNumber(0, operations.length)];
   const question = `${num1}${randomOperation}${num2}`;
-  const correctExpression = getExpressionResult(randomOperation, num1, num2);
-  const correctAnswer = String(correctExpression);
+  const correctAnswer = String(getExpressionResult(randomOperation, num1, num2));
   return [question, correctAnswer];
 };
-const playStartGame = () => {
+const playGame = () => {
   startGame(gameDescription, getCorrectResult);
 };
-export default playStartGame;
+export default playGame;

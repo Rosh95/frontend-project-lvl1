@@ -3,23 +3,29 @@ import startGame from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const getCorrectResult = () => {
-  let question = [];
-  const firstNumber = getRandomNumber(1, 20);
-  const addNumber = getRandomNumber(2, 7);
-  const arrLength = getRandomNumber(5, 15);
-
-  for (let i = firstNumber; question.length < arrLength; i += addNumber) {
-    question.push(i);
+const createProgression = (firstNumber, diffProgression, progressionLength) => {
+  const progression = [];
+  for (let i = firstNumber; progression.length < progressionLength; i += diffProgression) {
+    progression.push(i);
   }
-  const randomIndex = getRandomNumber(0, question.length - 1);
-  const correctEmptyNumber = question[randomIndex];
-  const correctAnswer = String(correctEmptyNumber);
-  question[randomIndex] = '..';
-  question = question.join(' ');
-  return [question, correctAnswer];
+  return progression;
 };
-const playStartGame = () => {
-  startGame(gameDescription, getCorrectResult);
+const createProgressionWithEmptyNumber = () => {
+  const firstNumber = getRandomNumber(1, 20);
+  const diffProgression = getRandomNumber(2, 7);
+  const progressionLength = getRandomNumber(5, 15);
+
+  let mathProgression = createProgression(firstNumber, diffProgression, progressionLength);
+  const randomIndex = getRandomNumber(0, mathProgression.length - 1);
+  const emptyNumber = mathProgression[randomIndex];
+  const correctAnswer = String(emptyNumber);
+
+  mathProgression[randomIndex] = '..';
+  mathProgression = mathProgression.join(' ');
+
+  return [mathProgression, correctAnswer];
 };
-export default playStartGame;
+const playGame = () => {
+  startGame(gameDescription, createProgressionWithEmptyNumber);
+};
+export default playGame;

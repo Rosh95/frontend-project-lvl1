@@ -3,7 +3,7 @@ import startGame from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isEven = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
@@ -20,10 +20,10 @@ const isEven = (num) => {
 
 const getGameData = () => {
   const question = getRandomNumber(0, 100);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
-const playStartGame = () => {
+const playGame = () => {
   startGame(gameDescription, getGameData);
 };
-export default playStartGame;
+export default playGame;
