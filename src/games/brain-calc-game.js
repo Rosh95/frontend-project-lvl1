@@ -22,7 +22,6 @@ const getCorrectResult = () => {
   const num2 = getRandomNumber(1, 30);
   const randomOperation = operations[getRandomNumber(0, operations.length)];
   const question = `${num1}${randomOperation}${num2}`;
-  const question = `${num1}${randomOperation}${num2}`;
   const correctExpression = getExpressionResult(randomOperation, num1, num2);
   return [question, correctAnswer];
 };
