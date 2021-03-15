@@ -20,7 +20,8 @@ const getGameData = () => {
   const answer = String(mathProgression[randomIndex]);
 
   mathProgression[randomIndex] = '..';
+  const progression = mathProgression.join(' ');
 
-  return [mathProgression.join(' '), answer];
+  return [progression, answer];
 };
 export default () => startGame(gameDescription, getGameData);
