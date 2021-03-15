@@ -10,22 +10,17 @@ const createProgression = (firstNumber, diffProgression, progressionLength) => {
   }
   return progression;
 };
-const createProgressionWithEmptyNumber = () => {
+const getGameData = () => {
   const firstNumber = getRandomNumber(1, 20);
   const diffProgression = getRandomNumber(2, 7);
   const progressionLength = getRandomNumber(5, 15);
 
-  let mathProgression = createProgression(firstNumber, diffProgression, progressionLength);
+  const mathProgression = createProgression(firstNumber, diffProgression, progressionLength);
   const randomIndex = getRandomNumber(0, mathProgression.length - 1);
-  const emptyNumber = mathProgression[randomIndex];
-  const correctAnswer = String(emptyNumber);
+  const answer = String(mathProgression[randomIndex]);
 
   mathProgression[randomIndex] = '..';
-  mathProgression = mathProgression.join(' ');
 
-  return [mathProgression, correctAnswer];
+  return [mathProgression.join(' '), answer];
 };
-const playGame = () => {
-  startGame(gameDescription, createProgressionWithEmptyNumber);
-};
-export default playGame;
+export default () => startGame(gameDescription, getGameData);

@@ -16,16 +16,13 @@ const getExpressionResult = (operation, num1, num2) => {
   }
 };
 
-const getCorrectResult = () => {
+const getGameData = () => {
   const operations = ['+', '-', '*'];
   const num1 = getRandomNumber(1, 30);
   const num2 = getRandomNumber(1, 30);
   const randomOperation = operations[getRandomNumber(0, operations.length)];
   const question = `${num1} ${randomOperation} ${num2}`;
-  const correctAnswer = String(getExpressionResult(randomOperation, num1, num2));
-  return [question, correctAnswer];
+  const answer = String(getExpressionResult(randomOperation, num1, num2));
+  return [question, answer];
 };
-const playGame = () => {
-  startGame(gameDescription, getCorrectResult);
-};
-export default playGame;
+export default () => startGame(gameDescription, getGameData);
