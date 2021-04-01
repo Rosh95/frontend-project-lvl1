@@ -5,8 +5,8 @@ const gameDescription = 'What number is missing in the progression?';
 
 const createProgression = (firstNumber, diffProgression, progressionLength) => {
   const progression = [];
-  for (let i = firstNumber; progression.length < progressionLength; i += diffProgression) {
-    progression.push(i);
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression.push(firstNumber + i * diffProgression);
   }
   return progression;
 };
@@ -20,8 +20,8 @@ const getGameData = () => {
   const answer = String(mathProgression[randomIndex]);
 
   mathProgression[randomIndex] = '..';
-  const progression = mathProgression.join(' ');
+  const question = mathProgression.join(' ');
 
-  return [progression, answer];
+  return [question, answer];
 };
 export default () => startGame(gameDescription, getGameData);
