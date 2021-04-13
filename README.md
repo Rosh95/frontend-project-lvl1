@@ -6,9 +6,9 @@
 
 ## Установка:
 ```javascript
-<p> $ make install </p>
-<p> $ make publish </p>
-<p> $ npm link </p>
+ $ make install 
+ $ make publish 
+ $ npm link 
 ```
 ## Brain-even
 
