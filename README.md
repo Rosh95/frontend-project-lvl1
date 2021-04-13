@@ -5,9 +5,9 @@
 [![linter](https://github.com/Rosh95/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Rosh95/frontend-project-lvl1/actions/workflows/linter.yml)
 
 ## Установка:
-$ make install 
-$ make publish
-$ npm link 
+<p> $ make install </p>
+<p> $ make publish </p>
+<p> $ npm link </p>
 
 ## Brain-even
 
