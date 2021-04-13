@@ -4,11 +4,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e2b012bddf33aa0430dc/maintainability)](https://codeclimate.com/github/Rosh95/frontend-project-lvl1/maintainability)
 [![linter](https://github.com/Rosh95/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Rosh95/frontend-project-lvl1/actions/workflows/linter.yml)
 
+## Установка:
+$ make install 
+$ make publish
+$ npm link 
+
 ## Brain-even
 
 ## Старт игры:
-<p> 1.Открываем консоль (у меня Ubuntu) </p>
-<p> 2.Вводим brain-even </p>
+<p> Открываем консоль и вводим brain-even </p>
 
 ### Описание игры:
 
@@ -20,8 +24,7 @@
 ## Brain-calc
 
 ## Старт игры:
-<p> 1.Открываем консоль (у меня Ubuntu).</p>
-<p> 2.Вводим brain-calc </p>
+<p> Открываем консоль и вводим brain-calc </p>
 
 ### Описание игры:
 
@@ -33,8 +36,7 @@
 ## Brain-gcd
 
 ## Старт игры:
-<p> 1.Открываем консоль (у меня Ubuntu). </p>
-<p> 2.Вводим brain-gcd </p>
+<p> Открываем консоль и вводим brain-gcd </p>
 
 ### Описание игры:
 
@@ -46,8 +48,7 @@
 ## Brain-progression
 
 ## Старт игры:
-<p> 1.Открываем консоль (у меня Ubuntu). </p>
-<p> 2.Вводим brain-progression </p>
+<p> Открываем консоль и вводим brain-progression </p>
 
 ### Описание игры:
 
@@ -59,8 +60,7 @@
 ## Brain-prime
 
 ## Старт игры:
-<p> 1.Открываем консоль (у меня Ubuntu). </p>
-<p> 2.Вводим brain-prime </p>
+<p> Открываем консоль и вводим brain-prime </p>
 
 ### Описание игры:
 
