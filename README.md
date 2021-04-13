@@ -5,10 +5,11 @@
 [![linter](https://github.com/Rosh95/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Rosh95/frontend-project-lvl1/actions/workflows/linter.yml)
 
 ## Установка:
-<p> make install </p>
-<p> make publish </p>
-<p> npm link </p>
-
+```javascript
+<p> $ make install </p>
+<p> $ make publish </p>
+<p> $ npm link </p>
+```
 ## Brain-even
 
 ## Старт игры:
